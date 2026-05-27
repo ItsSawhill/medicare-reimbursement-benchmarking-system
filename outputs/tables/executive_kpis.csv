@@ -1,0 +1,9 @@
+metric,value
+total_contract_paid,136640095.45
+total_medicare_benchmark,133983746.17999999
+total_financial_variance,12953395.720000003
+average_contract_to_medicare_ratio,1.0973206854152078
+high_risk_providers,26.0
+overpayment_flag_count,6414.0
+underpayment_flag_count,1415.0
+largest_scenario_impact,6832004.772500023
