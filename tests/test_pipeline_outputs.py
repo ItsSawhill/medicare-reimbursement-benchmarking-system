@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 TABLE_DIR = ROOT / "outputs" / "tables"
 FIGURE_DIR = ROOT / "outputs" / "figures"
 REPORT_DIR = ROOT / "outputs" / "reports"
+POWERBI_DIR = ROOT / "outputs" / "powerbi"
 
 
 def test_pipeline_runs():
@@ -44,6 +45,14 @@ def test_required_output_files_exist():
         FIGURE_DIR / "forecast_variance_trend.png",
         REPORT_DIR / "executive_summary.md",
         REPORT_DIR / "executive_workbook.xlsx",
+        POWERBI_DIR / "dim_provider.csv",
+        POWERBI_DIR / "dim_hcpcs.csv",
+        POWERBI_DIR / "dim_state.csv",
+        POWERBI_DIR / "dim_time.csv",
+        POWERBI_DIR / "fact_reimbursement.csv",
+        POWERBI_DIR / "fact_scenario_impact.csv",
+        POWERBI_DIR / "fact_forecast.csv",
+        POWERBI_DIR / "fact_flags.csv",
     ]
     missing = [str(path) for path in required if not path.exists()]
     assert not missing, f"Missing outputs: {missing}"
@@ -85,3 +94,45 @@ def test_readme_image_paths_exist():
     image_paths = re.findall(r"\((outputs/figures/[^)]+\.png)\)", readme)
     missing = [path for path in image_paths if not (ROOT / path).exists()]
     assert not missing, f"README references missing images: {missing}"
+
+
+def test_powerbi_outputs_exist_and_have_required_keys():
+    assert POWERBI_DIR.exists()
+    fact_reimbursement = pd.read_csv(POWERBI_DIR / "fact_reimbursement.csv")
+    fact_scenario = pd.read_csv(POWERBI_DIR / "fact_scenario_impact.csv")
+    fact_forecast = pd.read_csv(POWERBI_DIR / "fact_forecast.csv")
+    fact_flags = pd.read_csv(POWERBI_DIR / "fact_flags.csv")
+
+    assert {"provider_id", "hcpcs_code", "state", "month"}.issubset(fact_reimbursement.columns)
+    assert {"scenario_name", "baseline_spend", "simulated_spend", "dollar_impact"}.issubset(fact_scenario.columns)
+    assert {"month", "metric", "forecast_value"}.issubset(fact_forecast.columns)
+    assert {"provider_id", "hcpcs_code", "state", "month", "flag_type"}.issubset(fact_flags.columns)
+
+
+def test_powerbi_dimension_primary_keys_are_unique():
+    dim_provider = pd.read_csv(POWERBI_DIR / "dim_provider.csv")
+    dim_hcpcs = pd.read_csv(POWERBI_DIR / "dim_hcpcs.csv")
+    dim_state = pd.read_csv(POWERBI_DIR / "dim_state.csv")
+    dim_time = pd.read_csv(POWERBI_DIR / "dim_time.csv")
+
+    assert dim_provider["provider_id"].is_unique
+    assert dim_hcpcs["hcpcs_code"].is_unique
+    assert dim_state["state"].is_unique
+    assert dim_time["month"].is_unique
+
+
+def test_powerbi_no_negative_reimbursement_amounts():
+    fact = pd.read_csv(POWERBI_DIR / "fact_reimbursement.csv")
+    for column in ["contract_allowed_amount", "contract_paid_amount", "contract_total_paid", "medicare_benchmark_amount"]:
+        assert (fact[column] >= 0).all()
+
+
+def test_powerbi_docs_exist():
+    required_docs = [
+        ROOT / "docs" / "powerbi_data_model.md",
+        ROOT / "docs" / "powerbi_dashboard_spec.md",
+        ROOT / "docs" / "powerbi_dax_measures.md",
+        ROOT / "docs" / "power_query_steps.md",
+    ]
+    missing = [str(path) for path in required_docs if not path.exists()]
+    assert not missing, f"Missing Power BI docs: {missing}"

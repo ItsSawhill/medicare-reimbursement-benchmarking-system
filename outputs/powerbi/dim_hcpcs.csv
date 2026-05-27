@@ -1,0 +1,11 @@
+hcpcs_code,service_description,service_category,avg_medicare_benchmark,avg_contract_to_medicare_ratio,exposure_rank
+27447,Total knee arthroplasty,Surgery,1251.4196426846934,1.0977955858336093,1
+99214,Office/outpatient established visit high complexity,Professional,133.04570719602975,1.0963165887182924,2
+99213,Office/outpatient established visit,Professional,89.74321792260692,1.099014213648623,3
+45378,Diagnostic colonoscopy,Outpatient,395.1508205635195,1.09574369850654,4
+A0429,Ambulance basic life support,Emergency,311.9261447562777,1.0966948824775116,5
+70551,MRI brain without contrast,Imaging,242.3370959466393,1.0968886298028409,6
+J3490,Unclassified drug,Pharmacy,114.70651174412794,1.0930755902140077,7
+71046,Chest x-ray two views,Imaging,34.39690091001012,1.0998970109745518,8
+80053,Comprehensive metabolic panel,Lab,14.190035915854285,1.0991795370324238,9
+93000,Electrocardiogram complete,Diagnostic,23.13583952451709,1.098703813219969,10

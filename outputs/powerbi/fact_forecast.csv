@@ -1,0 +1,10 @@
+month,metric,forecast_value,method
+2026-01,monthly_reimbursement_spend,5664778.751130738,rolling average + exponential smoothing
+2026-02,monthly_reimbursement_spend,5559378.461130738,rolling average + exponential smoothing
+2026-03,monthly_reimbursement_spend,5453978.171130739,rolling average + exponential smoothing
+2026-01,monthly_benchmark_variance,733006.6028626821,rolling average + exponential smoothing
+2026-02,monthly_benchmark_variance,734195.0608626821,rolling average + exponential smoothing
+2026-03,monthly_benchmark_variance,735383.5188626822,rolling average + exponential smoothing
+2026-01,provider_exposure,1046637.9191389224,rolling average + exponential smoothing
+2026-02,provider_exposure,1034349.6451389223,rolling average + exponential smoothing
+2026-03,provider_exposure,1022061.3711389223,rolling average + exponential smoothing

@@ -1,0 +1,61 @@
+provider_id,provider_name,provider_type,state,total_services,average_contract_to_medicare_ratio,reimbursement_risk_score,risk_tier,recommended_action
+PRV002,Provider Network 02,Imaging Center,NC,13231,1.305557260573584,93.75,Critical,Review for potential overpayment / renegotiation
+PRV043,Provider Network 43,Imaging Center,NC,12523,1.429083110638144,92.08,Critical,Review for potential overpayment / renegotiation
+PRV044,Provider Network 44,Hospital Outpatient,MD,12684,1.3843427925747809,91.42,Critical,Review for potential overpayment / renegotiation
+PRV018,Provider Network 18,Physician Group,VA,13578,1.2630025180412765,90.58,Critical,Review for potential overpayment / renegotiation
+PRV017,Provider Network 17,Ambulatory Surgery,VA,12299,1.5516692827653704,90.0,Critical,Review for potential overpayment / renegotiation
+PRV007,Provider Network 07,Physician Group,FL,13121,1.266976596410039,89.75,Critical,Review for potential overpayment / renegotiation
+PRV008,Provider Network 08,Imaging Center,PA,12787,1.2757449984922145,89.58,Critical,Review for potential overpayment / renegotiation
+PRV021,Provider Network 21,Ambulatory Surgery,FL,12849,1.2539684568844713,84.92,Critical,Review for potential overpayment / renegotiation
+PRV032,Provider Network 32,Hospital Outpatient,NC,13518,1.2109348312323074,79.42,Critical,Review for potential overpayment / renegotiation
+PRV004,Provider Network 04,Ambulatory Surgery,FL,11441,1.425580253089571,77.75,Critical,Review for potential overpayment / renegotiation
+PRV006,Provider Network 06,Lab,VA,12363,1.2311982081076898,75.42,Critical,Review for potential overpayment / renegotiation
+PRV029,Provider Network 29,Ambulatory Surgery,NC,12241,0.7500582085743517,75.33,Critical,Review for underpayment / access risk
+PRV051,Provider Network 51,Imaging Center,VA,11707,1.2729136418897051,73.08,High,Review for potential overpayment / renegotiation
+PRV031,Provider Network 31,Ambulatory Surgery,PA,12337,1.2139706381834334,71.17,High,Review for potential overpayment / renegotiation
+PRV046,Provider Network 46,Lab,NC,11431,1.2569611692861729,67.42,High,Review for potential overpayment / renegotiation
+PRV053,Provider Network 53,Hospital Outpatient,NY,12034,1.2149687204750643,65.83,High,Review for potential overpayment / renegotiation
+PRV033,Provider Network 33,Physician Group,FL,11308,1.2484114916803541,65.58,High,Review for potential overpayment / renegotiation
+PRV005,Provider Network 05,Ambulatory Surgery,PA,12893,1.1547194338366285,65.08,High,Monitor
+PRV052,Provider Network 52,Physician Group,NC,12221,0.8037700862801892,63.58,High,Monitor
+PRV020,Provider Network 20,Ambulatory Surgery,NC,12551,1.157676590524309,60.67,High,Monitor
+PRV028,Provider Network 28,Lab,VA,11612,1.2178633645311299,59.42,High,Review for potential overpayment / renegotiation
+PRV037,Provider Network 37,Lab,VA,11993,0.80870165159478,58.67,High,Monitor
+PRV016,Provider Network 16,Imaging Center,PA,10774,1.222015464219503,56.25,High,Review for potential overpayment / renegotiation
+PRV041,Provider Network 41,Physician Group,NC,11673,1.2004223429563354,55.75,High,Review for potential overpayment / renegotiation
+PRV003,Provider Network 03,Imaging Center,PA,11887,0.8196580225934791,55.33,High,Monitor
+PRV056,Provider Network 56,Physician Group,NY,12448,0.8609989090840564,55.33,High,Monitor
+PRV059,Provider Network 59,Imaging Center,VA,12002,1.1609154757827096,53.58,Moderate,Monitor
+PRV027,Provider Network 27,Ambulatory Surgery,MD,13198,0.9028808014278542,53.25,Moderate,Monitor
+PRV023,Provider Network 23,Physician Group,MD,10085,1.2076401434794781,53.08,Moderate,Review for potential overpayment / renegotiation
+PRV039,Provider Network 39,Hospital Outpatient,NY,12628,0.8864784289575717,51.0,Moderate,Monitor
+PRV013,Provider Network 13,Imaging Center,PA,12393,0.9009925370749565,46.5,Moderate,Monitor
+PRV054,Provider Network 54,Ambulatory Surgery,PA,10047,1.1804750987838901,45.92,Moderate,Monitor
+PRV034,Provider Network 34,Ambulatory Surgery,PA,11941,1.1250776724720875,45.75,Moderate,Monitor
+PRV048,Provider Network 48,Lab,NY,12420,1.088592640094479,44.33,Moderate,Monitor
+PRV036,Provider Network 36,Physician Group,VA,12063,1.1220788287627388,44.33,Moderate,Monitor
+PRV045,Provider Network 45,Physician Group,NC,13232,1.0636220686032856,44.17,Moderate,Monitor
+PRV057,Provider Network 57,Ambulatory Surgery,MD,11222,1.1492120810080575,43.92,Moderate,Monitor
+PRV060,Provider Network 60,Imaging Center,MD,11827,1.1247215441893919,43.25,Moderate,Monitor
+PRV040,Provider Network 40,Imaging Center,MD,13112,0.942572687406381,42.42,Moderate,Monitor
+PRV014,Provider Network 14,Imaging Center,MD,12334,0.9102305727324682,40.79,Moderate,Monitor
+PRV038,Provider Network 38,Lab,NC,10811,0.8495799728251778,39.75,Moderate,Monitor
+PRV011,Provider Network 11,Ambulatory Surgery,NC,12297,0.9240618199277021,38.83,Moderate,Monitor
+PRV030,Provider Network 30,Ambulatory Surgery,NC,10913,1.1416205111520468,36.92,Moderate,Monitor
+PRV009,Provider Network 09,Hospital Outpatient,MD,12148,1.0657341036418388,31.96,Low,Monitor
+PRV035,Provider Network 35,Lab,FL,12875,1.0423704413881498,31.0,Low,Monitor
+PRV022,Provider Network 22,Hospital Outpatient,PA,11504,1.077876296212342,30.0,Low,Monitor
+PRV025,Provider Network 25,Imaging Center,NY,12288,1.0536765325258377,29.75,Low,Monitor
+PRV010,Provider Network 10,Physician Group,PA,12704,1.0383783171801948,29.75,Low,Monitor
+PRV012,Provider Network 12,Lab,VA,10967,1.0848880958687561,29.17,Low,Monitor
+PRV019,Provider Network 19,Lab,NY,12247,1.0509120529600366,28.83,Low,Monitor
+PRV026,Provider Network 26,Imaging Center,NC,12281,1.0553071462638848,28.33,Low,Monitor
+PRV047,Provider Network 47,Ambulatory Surgery,NC,12744,0.9604402197465718,27.33,Low,Monitor
+PRV015,Provider Network 15,Imaging Center,NC,12334,0.955543485789596,25.04,Low,Monitor
+PRV050,Provider Network 50,Imaging Center,NC,11629,1.0548012773794204,22.75,Low,Monitor
+PRV049,Provider Network 49,Imaging Center,PA,10966,0.9519678291307538,16.25,Low,Monitor
+PRV001,Provider Network 01,Physician Group,FL,11841,0.9676925304775224,13.75,Low,Monitor
+PRV024,Provider Network 24,Lab,NC,12148,0.9978480217443283,13.12,Low,Monitor
+PRV042,Provider Network 42,Imaging Center,VA,10825,0.9552425525006916,12.0,Low,Monitor
+PRV055,Provider Network 55,Ambulatory Surgery,NY,10932,1.0171965270725016,5.83,Low,Monitor
+PRV058,Provider Network 58,Physician Group,MD,9947,1.0318213717400742,4.17,Low,Monitor

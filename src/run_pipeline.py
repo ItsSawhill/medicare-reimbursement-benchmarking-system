@@ -6,6 +6,7 @@ from cms_provider_payment_loader import load_cms_provider_payment
 from forecasting import forecast_reimbursement
 from preprocessing import clean_contract_rates
 from provider_risk_scoring import add_provider_risk
+from powerbi_export import export_powerbi_star_schema
 from reporting import executive_kpis, save_figures, write_executive_summary, write_workbook
 from scenario_modeling import scenario_impact_summary
 from synthetic_contract_generator import generate_synthetic_contract_rates, save_sample_contracts
@@ -19,6 +20,7 @@ SAMPLE_DIR = BASE_DIR / "data" / "sample"
 TABLE_DIR = BASE_DIR / "outputs" / "tables"
 FIGURE_DIR = BASE_DIR / "outputs" / "figures"
 REPORT_DIR = BASE_DIR / "outputs" / "reports"
+POWERBI_DIR = BASE_DIR / "outputs" / "powerbi"
 
 
 def write_table(df, filename: str) -> None:
@@ -27,7 +29,7 @@ def write_table(df, filename: str) -> None:
 
 
 def main() -> None:
-    for directory in [PROCESSED_DIR, SAMPLE_DIR, TABLE_DIR, FIGURE_DIR, REPORT_DIR]:
+    for directory in [PROCESSED_DIR, SAMPLE_DIR, TABLE_DIR, FIGURE_DIR, REPORT_DIR, POWERBI_DIR]:
         directory.mkdir(parents=True, exist_ok=True)
 
     fee_schedule, fee_source = load_or_generate_fee_schedule(RAW_DIR / "cms_fee_schedule.csv")
@@ -77,6 +79,7 @@ def main() -> None:
     save_figures(variance, provider, hcpcs, over, under, scenarios, monthly_forecast_base, forecast, FIGURE_DIR)
     write_executive_summary(provider, hcpcs, over, under, scenarios, forecast, REPORT_DIR / "executive_summary.md")
     write_workbook(kpis, provider, hcpcs, over, under, scenarios, forecast, REPORT_DIR / "executive_workbook.xlsx")
+    export_powerbi_star_schema(variance, provider, hcpcs, over, under, scenarios, forecast, POWERBI_DIR)
 
     print("Medicare reimbursement benchmarking pipeline completed.")
     print(f"Rows processed: {len(variance):,}")
@@ -85,6 +88,7 @@ def main() -> None:
     print(f"Tables: {TABLE_DIR}")
     print(f"Figures: {FIGURE_DIR}")
     print(f"Reports: {REPORT_DIR}")
+    print(f"Power BI: {POWERBI_DIR}")
 
 
 if __name__ == "__main__":
