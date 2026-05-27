@@ -211,12 +211,6 @@ medicare-reimbursement-benchmarking-system/
 └── tests/
 ```
 
-## Resume Bullets
-
-- Built a Medicare reimbursement benchmarking system using Python, SQL, Power BI-ready star schema exports, DAX documentation, and Excel-style reporting to compare synthetic provider contract rates against CMS-style Medicare benchmarks.
-- Developed provider and HCPCS variance analytics, overpayment/underpayment detection, reimbursement risk scoring, and financial impact scenario modeling for payer/provider decision support.
-- Created executive-ready Power BI model assets, forecasts, SQL reporting scripts, and workbook outputs for reimbursement leadership review.
-
 ## Limitations
 
 - Synthetic contract rates are not actual payer or hospital contracts.
